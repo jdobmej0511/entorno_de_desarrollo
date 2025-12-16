@@ -59,8 +59,10 @@ public class OperacionesBancarias {
             resultado = "Talonario enviado";
         } else if (orden.equals("Movimientos")){
             resultado = "Movimientos enviados";
-        } else {
+        } else if(orden.equals("")){
             resultado = "Talonario y movimientos enviados";
+        } else{
+            throw new IllegalArgumentException("Orden incorrecta");
         }
         return resultado;
     }
