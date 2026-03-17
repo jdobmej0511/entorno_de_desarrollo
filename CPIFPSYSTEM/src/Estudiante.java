@@ -6,7 +6,7 @@ public class Estudiante {
     private String nombre;
 
     @objid ("6a98aad3-edba-4181-b8e7-c9ded73efb31")
-    private int identificador;
+    private String identificador;
 
     @objid ("fb8e9ccd-81df-465e-9f15-8e28b92d6b41")
     public Modulo estudia;
@@ -24,7 +24,9 @@ public class Estudiante {
     }
 
     @objid ("7dd20ee6-771c-45dc-8622-16acd73e9561")
-    public Estudiante(final String nombre, final int identificador) {
+    public Estudiante(final String nombre, final String identificador) {
+        this.nombre = nombre;
+        this.identificador = identificador;
     }
 
 }

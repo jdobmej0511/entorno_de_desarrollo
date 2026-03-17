@@ -11,16 +11,17 @@ public class CPIFP {
     private String direccion;
 
     @objid ("aabe1b92-ee27-4e9e-8375-a09d282759c6")
-    private int tlf;
+    private String tlf;
 
     @objid ("fb8a90c4-7a57-4a5a-8157-2854c6aec423")
     private List<Departamento> listaDepartamentos = new ArrayList<Departamento> ();
 
     @objid ("9d2344aa-9773-4f2a-b0e3-13ef9190bc37")
-    public List<Estudiante> tiene = new ArrayList<Estudiante> ();
+    private List<Estudiante> listaEstudiantes = new ArrayList<Estudiante> ();
 
     @objid ("18ae4841-f882-455f-b21f-f86482932341")
-    public void añadirEstudiante(final Estudiante Añadir) {
+    public void añadirEstudiante(Estudiante estudiante) {
+        this.listaEstudiantes.add(estudiante);
     }
 
     @objid ("0fc3c3e4-885d-42d2-8fec-1bebccb996de")
@@ -32,7 +33,8 @@ public class CPIFP {
     }
 
     @objid ("4131d13d-4826-4009-9777-dd962c398a7a")
-    public void añadirDepartamento(final Departamento Añadir) {
+    public void añadirDepartamento(Departamento departamento) {
+        this.listaDepartamentos.add(departamento);
     }
 
     @objid ("86a4445d-cd9b-433a-ba19-ec1d47628872")
@@ -52,7 +54,7 @@ public class CPIFP {
     @objid ("f847f3c4-3665-4f5a-8feb-ec7da9852009")
     public List<Departamento> listarDepartamentos() {
         // TODO Auto-generated return
-        return null;
+        return listaDepartamentos;
     }
 
     @objid ("7b520ec3-ae32-444e-9d7a-2cd6f09c0e7b")
@@ -80,19 +82,22 @@ public class CPIFP {
     }
 
     @objid ("6ca71eb1-6613-41ed-804c-f646a00f4282")
-    public int getTlf() {
+    public String getTlf() {
         // Automatically generated method. Please delete this comment before entering specific code.
         return this.tlf;
     }
 
     @objid ("7c0b59c0-6041-49d8-a925-0c22a3ea8487")
-    public void setTlf(final int value) {
+    public void setTlf(final String value) {
         // Automatically generated method. Please delete this comment before entering specific code.
         this.tlf = value;
     }
 
     @objid ("96d453a0-24be-4dde-9afd-972d2af863b6")
     public CPIFP(final String nombre, final String direccion, final String tlf) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.tlf = direccion;
     }
 
 }

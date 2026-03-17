@@ -39,6 +39,8 @@ public class Profesor {
 
     @objid ("314eb822-bfa8-4e60-b8af-e62ddd145b24")
     public Profesor(final String nombre, final int identificador) {
+        this.nombre = nombre;
+        this.identificador = identificador;
     }
 
 }

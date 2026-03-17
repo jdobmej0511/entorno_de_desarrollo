@@ -22,6 +22,8 @@ public class Modulo {
 
     @objid ("10e27402-0ae1-4d18-a094-8743bffb82b3")
     public Modulo(final String nombre, final int ideModulo) {
+        this.nombre = nombre;
+        this.idModulo = ideModulo;
     }
 
 }

@@ -8,7 +8,7 @@ public class Departamento {
     private String nombre;
 
     @objid ("4c56a8e7-32c1-48d1-b6b8-da7e3bf61e34")
-    private String JefeDepartamento;
+    private Profesor jefeDepartamento;
 
     @objid ("a2f43da4-36c9-4d66-9068-ea1f25656e6e")
     public Profesor esJefe;
@@ -23,7 +23,8 @@ public class Departamento {
     private CPIFP cpifp;
 
     @objid ("1c55dc62-a66a-492e-bf19-22e7da8a0986")
-    public void añadirProfesor() {
+    public void añadirProfesor(Profesor profesor) {
+        this.pertenece.add(profesor);
     }
 
     @objid ("e60acf92-3aa8-469a-9c44-57685558aff9")
@@ -51,15 +52,15 @@ public class Departamento {
     }
 
     @objid ("d1a471d7-6707-47da-b52d-3bfedf8d40e5")
-    public String getJefeDepartamento() {
+    public Profesor getJefeDepartamento() {
         // Automatically generated method. Please delete this comment before entering specific code.
-        return this.JefeDepartamento;
+        return this.jefeDepartamento;
     }
 
     @objid ("501b8000-350b-49ee-bcfa-208b6f6759b9")
-    public void setJefeDepartamento(final String value) {
+    public void setJefeDepartamento(final Profesor value) {
         // Automatically generated method. Please delete this comment before entering specific code.
-        this.JefeDepartamento = value;
+        this.jefeDepartamento = value;
     }
 
     @objid ("1e37e9a4-7049-4b13-9c6e-cca28f6e59ec")
@@ -75,7 +76,9 @@ public class Departamento {
     }
 
     @objid ("163413e3-98e5-46d1-b0d8-e82aeaec522e")
-    public Departamento(final String Nombre, final String jefeDepartamento) {
+    public Departamento(final String nombre, final Profesor jefeDepartamento) {
+        this.nombre = nombre;
+        this.jefeDepartamento = jefeDepartamento;
     }
 
 }
